@@ -1,0 +1,13 @@
+-------------------------------------------------------------------------------
+Test set: com.example.semproject.UserServiceTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 6.211 s <<< FAILURE! -- in com.example.semproject.UserServiceTest
+com.example.semproject.UserServiceTest.testAddUser_Success -- Time elapsed: 5.926 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "org.springframework.mail.javamail.JavaMailSender.createMimeMessage()" because "this.mailSender" is null
+	at com.example.semproject.UserService.UserServices.sendOtpEmail(UserServices.java:80)
+	at com.example.semproject.UserService.UserServices.addUser(UserServices.java:69)
+	at com.example.semproject.UserServiceTest.testAddUser_Success(UserSeviceTest.java:41)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+

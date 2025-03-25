@@ -1,0 +1,24 @@
+-------------------------------------------------------------------------------
+Test set: com.example.semproject.EmailServiceTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 57.66 s <<< FAILURE! -- in com.example.semproject.EmailServiceTest
+com.example.semproject.EmailServiceTest.testSendEmail -- Time elapsed: 16.36 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: Unexpected exception thrown: org.springframework.mail.MailSendException: Failed messages: javax.mail.MessagingException: can't determine local email address
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:152)
+	at org.junit.jupiter.api.AssertDoesNotThrow.createAssertionFailedError(AssertDoesNotThrow.java:84)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:53)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:36)
+	at org.junit.jupiter.api.Assertions.assertDoesNotThrow(Assertions.java:3199)
+	at com.example.semproject.EmailServiceTest.testSendEmail(EmailServiceTest.java:24)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+Caused by: org.springframework.mail.MailSendException; nested exceptions (1) are:
+Failed message 1: javax.mail.MessagingException: can't determine local email address
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:422)
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:342)
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:338)
+	at com.example.semproject.EmailServiceTest.lambda$testSendEmail$0(EmailServiceTest.java:32)
+	at org.junit.jupiter.api.AssertDoesNotThrow.assertDoesNotThrow(AssertDoesNotThrow.java:49)
+	... 6 more
+
